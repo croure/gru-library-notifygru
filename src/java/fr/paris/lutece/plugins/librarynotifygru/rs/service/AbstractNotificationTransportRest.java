@@ -120,9 +120,24 @@ abstract class AbstractNotificationTransportRest implements INotificationTranspo
         _logger.debug( "LibraryNotifyGru - AbstractNotificationTransportRest.send() with endPoint [ {} ]", _strNotificationEndPoint );
 
         Map<String, String> mapHeadersRequest = new HashMap<>( );
-        Map<String, String> mapParams = new HashMap<>( );
 
         addAuthentication( mapHeadersRequest );
+
+        return send( notification, mapHeadersRequest );
+    }
+
+    /**
+     * Send the notification with the given request headers
+     * 
+     * @param notification
+     *            the notification
+     * @param mapHeadersRequest
+     *            the request headers, authentication included
+     * @return the response
+     */
+    protected NotifyGruResponse send( Notification notification, Map<String, String> mapHeadersRequest )
+    {
+        Map<String, String> mapParams = new HashMap<>( );
 
         try
         {

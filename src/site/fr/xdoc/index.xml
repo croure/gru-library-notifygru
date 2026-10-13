@@ -31,6 +31,7 @@ library-notifygru.notifier.notificationStore.enabled=false
 library-notifygru.NotificationStoreNotifierService.notificationEndPoint=http://localhost:9092/lutece/rest/notification/send
 library-notifygru.NotificationStoreNotifierService.apiManagerEndPoint=http://localhost:9092/lutece/rest/api/token
 library-notifygru.NotificationStoreNotifierService.apiManagerCredentials=CHANGE_ME
+library-notifygru.NotificationStoreNotifierService.apiManagerTokenExpiryMargin=60
                    </pre>
 
                </subsection>
